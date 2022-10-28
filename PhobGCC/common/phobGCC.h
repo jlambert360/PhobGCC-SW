@@ -1475,7 +1475,7 @@ void processButtons(Pins &pin, Buttons &btn, Buttons &hardware, ControlConfig &c
 	* Increase/Decrease X-Axis Waveshaping:  LXZ+Du/Dd
 	* Increase/Decrease X-Axis Offset:  RXZ+Du/Dd
 	* Increase/Decrease Y-Axis Offset:  RYZ+Du/Dd
-	* Show C-Stick Settings:  RStart+Dd
+	* Show C-Stick Settings:  R+Start
 	*
 	* Swap X with Z:  XZ+Start
 	* Swap Y with Z:  YZ+Start
