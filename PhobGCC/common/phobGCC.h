@@ -2183,10 +2183,10 @@ void readSticks(int readA, int readC, Buttons &btn, Pins &pin, RawStick &raw, co
 	notchRemap(_raw.cxLinearized, _raw.cyLinearized, &remappedCxUnfiltered, &remappedCyUnfiltered, _noOfNotches, cStickParams, 1);//no snapping
 
 	//Clamp values from -125 to +125
-	remappedAx = fmin(125, fmax(-125, remappedAx));
-	remappedAy = fmin(125, fmax(-125, remappedAy));
-	remappedCx = fmin(125, fmax(-125, remappedCx+controls.cXOffset));
-	remappedCy = fmin(125, fmax(-125, remappedCy+controls.cYOffset));
+	remappedAx = fmin(125, fmax(-125, remappedAx * 1.08));
+	remappedAy = fmin(125, fmax(-125, remappedAy * 1.08));
+	remappedCx = fmin(125, fmax(-125, (remappedCx * 1.08)+controls.cXOffset));
+	remappedCy = fmin(125, fmax(-125, (remappedCy * 1.08)+controls.cYOffset));
 	_raw.axUnfiltered = fmin(125, fmax(-125, remappedAxUnfiltered));
 	_raw.ayUnfiltered = fmin(125, fmax(-125, remappedAyUnfiltered));
 	_raw.cxUnfiltered = fmin(125, fmax(-125, remappedCxUnfiltered+controls.cXOffset));
